@@ -29,7 +29,7 @@ class tampilan extends StatelessWidget {
           onTap: () {
             Navigator.of(context).pushReplacementNamed(
               Afterawal.nameroute,
-              arguments: link.id,
+              arguments: link.id.toString(),
               // id.toString(),
             );
           },
@@ -62,9 +62,10 @@ class tampilan extends StatelessWidget {
                         onPressed: () {
                           link.status();
                         },
-                        icon: (link.favorito)
-                            ? Icon(Icons.favorite)
-                            : Icon(Icons.favorite_border_outlined),
+                        icon:
+                            (link.favorito)
+                                ? Icon(Icons.favorite)
+                                : Icon(Icons.favorite_border_outlined),
                       ),
                     ),
                     Expanded(
